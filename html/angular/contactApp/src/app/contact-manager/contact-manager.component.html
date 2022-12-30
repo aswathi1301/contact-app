@@ -1,0 +1,83 @@
+<div class="container title mt-3">
+    <div class="row">
+        <div class="col">
+            <h1>Contact Management Application
+
+                <a routerLink="/contacts/add" class="btn btn-success">
+                    <i class="fa-solid fa-user-plus"></i>&nbsp;
+                    Add New
+                </a>
+                
+
+
+            </h1>
+
+            <p style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Aperiam veniam nostrum ducimus repellat nam provident perspiciatis eos.
+                 Dicta reiciendis eius illo beatae, ea, quaerat veniam natus dolorem voluptatum non laboriosam.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ut, saepe quidem quisquam voluptate praesentium aliquid consequuntur a et. 
+                 Consequuntur, iste exercitationem velit asperiores doloremque ad impedit inventore repellat quos quaerat.
+            </p>
+            <div class="row">
+                <div class="col-6">
+                   <input  (keyup)="search($event)" type="text" class="form-control" placeholder="search contact here">
+                </div>
+                <!--<div class="col-6">
+                    <button class="btn btn-outline-dark">Search</button>
+                </div>!--> 
+            </div>
+
+
+            <!--<pre>
+                {{allContacts | json}}
+            </pre>!-->
+
+
+            <!---------card design------>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-6 mt-3" *ngFor="let contact of allContacts | filter :searchKey:'name' ">
+                        <div class="card list-group-item-secondary">
+                            <div class="card-body">
+                                <div class="row align-item-center">
+                                    <div class="col-md-3">
+                                        <!---contact image-->
+                                        <img height="=160px" [src]="contact.photo" alt="no image" class="contact_image">
+                                    </div>
+                                    <!----contact details---->
+                                    <div class="col-md-8 mt-5">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Name:<b>{{contact.name}}</b></li>
+                                            <li class="list-group-item">Email:<b>{{contact.email}}</b></li>
+                                            <li class="list-group-item">Mobile:<b>{{contact.mobile}}</b></li>
+                                          </ul>
+                                    </div>
+                                    <div class="col-md-1 mt-3 d-flex flex-column justify-content-center align-items-center">
+                                        <!---view-->
+                                        <a routerLink="/contacts/view/{{contact.id}}" class="btn btn-warning">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <!---edit-->
+                                        <a routerLink="/contacts/edit/:contactId" class="btn btn-success mt-1">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
+                                        <!----delete-->
+                                        <button class="btn btn-danger mt-1">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,39 @@
+
+
+
+
+                Contact Management App
+
+            1.create a angular project
+            2.installing bootstrap and font-awesome
+            3.paste cdn link of font-awesome in index.html
+            4.configure bootstrap and font-awesome in angular.json
+            5.configure google fonts in style.css / index.html
+            6.check all work fine
+            7.create components needed to display in webpage
+                -contactManager -view all contacts
+                -addContact- add new contact
+                -updateContact- to edit existing contact
+                -viewContact- to view a particular contact
+                -pageNotFound- to display page not found
+                navbar-place its selector inside root component html page
+            8.set up path for each component in order to view it in browser
+                -set up path for each component in app-routing.module.ts,routes array
+                -in app.component.html add router-outlet selector for displaying different web page as per user request
+            9.Set up the server api-
+                -create server gfolder inside the project
+                -create db.json file
+                -open cmd from server folder
+                    -create package.json file-command: npm init
+                    -install json-server inside server folder
+                    -update package.json file, script as
+                    "start": "json-server --watch db.json --port 3000"
+                    -to run server use command:npm start
+            10.create model for contacts and group
+                -create model folder in src folder
+                -create myContact.ts file iside that folder
+                -create myGroup.ts file iside that folder
+            11.create an angular service for making api call      
+            12.to get http methods- get,post,put,patch,delete
+                - import HttpClientModule in app.module.ts
+                -Dependency injection HttpClient in api service file

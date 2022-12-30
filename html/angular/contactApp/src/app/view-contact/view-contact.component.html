@@ -1,0 +1,44 @@
+<div class="container mt-4 title">
+    <div class="row">
+        <div class="col">
+            <h1>
+                
+                <i class="fa-solid fa-eye"></i>&nbsp;
+                View Contact Page
+            </h1>
+
+            <p style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Aperiam veniam nostrum ducimus repellat nam provident perspiciatis eos.
+                 Dicta reiciendis eius illo beatae, ea, quaerat veniam natus dolorem voluptatum non laboriosam.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ut, saepe quidem quisquam voluptate praesentium aliquid consequuntur a et. 
+                 Consequuntur, iste exercitationem velit asperiores doloremque ad impedit inventore repellat quos quaerat.
+            </p>
+        </div>
+
+    </div>
+
+    <!-----view contact page details-->
+    <div class="container mt-4 mb-3">
+        <div class="row border p-5 align-items-center">
+            <div class="col-md-4">
+                <!----contact image----->
+                <img width="200px"  [src]="contact.photo" alt="no image">
+                <br>
+                <a routerLink="/" class="btn btn-warning ms-5"><i class="fa-solid fa-circle-left"></i>
+                    Go Back</a>
+            </div>
+            <div class="col-md-8">
+                <!-----contact details-->
+                <ul class="list-group">
+                    <li class="list-group-item">Name:<b>{{contact.name}}</b></li>
+                    <li class="list-group-item">Email:<b>{{contact.email}}</b></li>
+                    <li class="list-group-item">Mobile:<b>{{contact.mobile}}</b></li>
+                    <li class="list-group-item">Company:<b>{{contact.company}}</b></li>
+                    <li class="list-group-item">Title:<b>{{contact.title}}</b></li>
+                    <li class="list-group-item">Group:<b>{{groupName}}</b></li>
+                  </ul>
+            </div>
+        </div>
+    </div>

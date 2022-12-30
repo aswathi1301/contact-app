@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Island+Moments&display=swap');
+.title{
+    font-family: 'Unbounded', cursive;
+
+}
+.contact_image{
+    width: 150px;
+    border-radius: 50%;
+}
