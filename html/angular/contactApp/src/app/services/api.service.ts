@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MyContact } from 'src/models/myContact';
@@ -40,5 +41,15 @@ export class ApiService {
   //function for adding new contact to server
   addContact(contactBody:any){
    return this.http.post(this.baseUrl,contactBody)
+  }
+
+  //function is for deleting a contact
+  deleteContact(contactId:any){
+   return this.http.delete(`${this.baseUrl}/${contactId}`)
+  }
+
+  //update contact details according to user select
+  updateContact(contactId:any,contactBody:any){
+    return this.http.put(`${this.baseUrl}/${contactId}`,contactBody)
   }
 }

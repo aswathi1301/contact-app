@@ -24,22 +24,22 @@
             <div class="col-md-4">
                 <form class="border p-3 rounded">
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input name="cName" [(ngModel)]="contact.name" type="text" class="form-control" placeholder="Name">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Photo URL">
+                        <input name="photo" [(ngModel)]="contact.photo" type="text" class="form-control" placeholder="Photo URL">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Email Id">
+                        <input name="email" [(ngModel)]="contact.email" type="text" class="form-control" placeholder="Email Id">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Mobile Number">
+                        <input name="mobile" [(ngModel)]="contact.mobile" type="text" class="form-control" placeholder="Mobile Number">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Company">
+                        <input name="company" [(ngModel)]="contact.company" type="text" class="form-control" placeholder="Company">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Title">
+                        <input name="title" [(ngModel)]="contact.title" type="text" class="form-control" placeholder="Title">
                     </div>
                     <div class="mb-2">
                         <select name="" id="" class="form-control">
@@ -49,14 +49,14 @@
                         </select>
                     </div>
                     <div class="mb-2">
-                        <input type="button" value="Update" class="btn btn-success">
+                        <input type="button" (click)="updateContact()" value="Update" class="btn btn-success">
                         <a routerLink="/" class="btn btn-warning ms-3">Close</a>
                     </div>
                 </form>
             </div>
             <!---img-->
             <div class="col-md-4">
-                <img src="https://img.icons8.com/color/480/person-male.png" alt="no image" class="contact_image mt-2">
+                <img [src]="contact.photo" alt="no image" class="contact_image mt-2">
             </div>
         </div>
     </div>

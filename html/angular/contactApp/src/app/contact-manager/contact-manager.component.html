@@ -1,4 +1,4 @@
-<div class="container title mt-3">
+<div class="container title mt-3 bg-info text-dark">
     <div class="row">
         <div class="col">
             <h1>Contact Management Application
@@ -47,7 +47,7 @@
                                         <img height="=160px" [src]="contact.photo" alt="no image" class="contact_image">
                                     </div>
                                     <!----contact details---->
-                                    <div class="col-md-8 mt-5">
+                                    <div class="col-md-6 mt-5">
                                         <ul class="list-group">
                                             <li class="list-group-item">Name:<b>{{contact.name}}</b></li>
                                             <li class="list-group-item">Email:<b>{{contact.email}}</b></li>
@@ -60,11 +60,11 @@
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
                                         <!---edit-->
-                                        <a routerLink="/contacts/edit/:contactId" class="btn btn-success mt-1">
+                                        <a routerLink="/contacts/edit/{{contact.id}}" class="btn btn-success mt-1">
                                             <i class="fa-solid fa-pen"></i>
                                         </a>
                                         <!----delete-->
-                                        <button class="btn btn-danger mt-1">
+                                        <button (click)="deleteContact(contact.id)" class="btn btn-danger mt-1">
                                             <i class="fa-solid fa-trash"></i>
                                         </button>
                                         
